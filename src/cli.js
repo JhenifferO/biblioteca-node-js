@@ -1,21 +1,22 @@
 import chalk from 'chalk';
 import fs from 'fs';
 import pegaArquivo from './index.js';
-import listaValidada from './http-validacao.js'
+import listaValidada from './http-validacao.js';
+
 const caminho = process.argv;
 
-function imprimeLista(valida, resultado, identificador = '') {
-    if(valida) {
-        console.log(
-            chalk.yellow('lista de validada'),
-            chalk.black.bgGreen(identificador),
-            listaValidada(resultado));
-    } else {
+async function imprimeLista(valida, resultado, identificador = '') {
+  if (valida) {
     console.log(
-        chalk.yellow('lista de links'),
-        chalk.black.bgGreen(identificador),
-        resultado);
-    }
+      chalk.yellow('lista validada'),
+      chalk.black.bgGreen(identificador),
+      await listaValidada(resultado));    
+  } else {
+    console.log(
+      chalk.yellow('lista de links'),
+      chalk.black.bgGreen(identificador),
+      resultado);
+  }
 }
 
 

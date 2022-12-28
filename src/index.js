@@ -20,7 +20,7 @@ async function pegaArquivo(caminhoDoArquivo) {
     const encoding = 'utf-8';
     const texto = await fs.promises.readFile(caminhoDoArquivo, encoding)
     return extraiLinks(texto);
-  } catch (erro) {
+  } catch (erro) {  
     trataErro(erro)
   }
 }
