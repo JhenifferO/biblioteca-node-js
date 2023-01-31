@@ -1,7 +1,8 @@
-# biblioteca-node-js
-Uma biblioteca node.js para identificação de links em textos.
+Node.js library
+
+A node.js library developed in order to identify link in texts, project done following "Node.js Library" course.
 
 - Promises
-- Tratamento de Erros
-- Validações
-- Interações com a linha de comando
+- Error Handling
+- Validations
+- Interactions with the command line
